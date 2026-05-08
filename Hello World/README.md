@@ -6,7 +6,7 @@ This software is a simple Hello World application written in JavaScript. The pro
 
 The purpose of creating this software was to practice setting up a development environment, running JavaScript through Node.js, using Visual Studio Code, and publishing a project to GitHub.
 
-[Software Demo Video](PASTE YOUR YOUTUBE LINK HERE)
+[Software Demo Video] (https://youtu.be/2jQotEKDLPo)
 
 
 # Development Environment
