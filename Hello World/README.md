@@ -19,6 +19,13 @@ The purpose of creating this software was to practice setting up a development e
 
 * JavaScript
 
+# Hours
+* Setup GitHub & VS Code	1 hr
+* Coding                    0.5 hr
+* Video                     0.5 hr
+* Upload                    0.25 hr
+* Readme                    0.25 hr
+
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
