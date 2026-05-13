@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Pantry - add ingredients to your pantry so we can keep track of what you have." />
+  <meta name="author" content="Dominic Trujillo-Grissom" />
+  <title>My Pantry | Smart Pantry</title>
+  <link rel="icon" href="images/chef.ico" type="image/x-icon" />
+
+  <meta property="og:title" content="Smart Pantry - Cook What You Have" />
+  <meta property="og:description" content="Stop wondering what to cook. Tell us what's in your pantry — we'll show you what you can make!" />
+  <meta property="og:image" content="https://dumpsterdom.github.io/wdd231/cookwhat/images/hero-pasta.jpg" />
+  <meta property="og:url" content="https://dumpsterdom.github.io/wdd231/cookwhat/index.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/pantry.css">
+  <link rel="stylesheet" href="styles/pantrymobile.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+    <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Smart Pantry Logo" width="80" height="80">
+        <span class="chamber-title">Smart Pantry</span>
+      </a>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav -->
+      <nav id="mainNav" class="nav-closed">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pantry.html" class="nav-link">My Pantry</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home">
+
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/food4.jpg" alt="Well-stocked pantry" class="hero-image" fetchpriority="high">
+      
+      <div class="hero-card-container">
+        <div class="hero-card">
+          <h1>My Pantry</h1>
+          <p>Add the ingredients you currently have at home</p>
+          <p>We'll find recipes you can make <strong>right now!</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantry input-->
+    <div class="container">
+      <section class="pantry-section">
+        <h2>What's in your kitchen today?</h2>
+        
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="ingredientInput" 
+            placeholder="e.g. chicken, rice, tomatoes, garlic..." 
+            autocomplete="off">
+          <button id="addBtn" class="cta-button add-btn">Add Ingredient</button>
+        </div>
+
+        <div id="pantryList" class="ingredients-list"></div>
+
+        <div class="action-buttons">
+          <button id="clearBtn" class="clear-btn">Clear All</button>
+          <a href="recipes.html" class="cta-button large-cta">Show Me Recipes</a>
+        </div>
+      </section>
+
+      <section class="almost-section">
+        <img src="images/food5.jpg" alt="Close to cooking something great" class="almost-bg-img" loading="lazy">
+        <div class="almost-overlay"></div>
+
+        <div class="almost-card">
+          <h2>You're Almost There!</h2>
+          <p>Add just <strong>one or two</strong> more ingredients and you can make these:</p>
+          <div id="almostRecipes" class="almost-grid"></div>
+          <p class="tip-text">Tip: These are the most popular recipes you're <em>closest</em> to being able to cook!</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="contact">
+        <p><strong>Smart Pantry</strong> - Recipe Recommendations</p>
+        <a href="https://youtu.be/zmQu3OtZ7bo" target="_blank" class="footer-link video-link">Demo Video</a> | 
+        © <span id="year"></span> Smart Pantry
+      </div>
+      <div class="me">
+        <p>
+          <a href="references.html" class="footer-link">References</a> | 
+          © <span id="year"></span> Smart Pantry
+        </p>
+        <p>Last modified: <span id="lastMod"></span></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="scripts/pantry.js"></script>
+  <script type="module" src="scripts/index.js"></script>
+</body>
+</html>
