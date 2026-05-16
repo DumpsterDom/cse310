@@ -7,7 +7,7 @@ Smart Pantry is a web application that helps users discover recipes based on ing
 The purpose of creating this software was to gain more experience building modern web applications using HTML, CSS, and JavaScript while improving my understanding of DOM manipulation, responsive layouts, accessibility, modular JavaScript, and browser databases.
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/a5PRg45Pl-Y)
 
 # Development Environment
 
