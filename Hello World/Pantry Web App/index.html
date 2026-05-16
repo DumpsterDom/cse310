@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Pantry - Get recipe ideas based on ingredients you already have at home." />
+  <meta name="author" content="Dominic Trujillo-Grissom" />
+
+  <title>Smart Pantry | Cook What You Have</title>
+  <link rel="icon" href="images/chef.ico" type="image/x-icon" />
+
+  <meta property="og:title" content="Smart Pantry - Cook What You Have" />
+  <meta property="og:description" content="Stop wondering what to cook. Tell us what's in your pantry — we'll show you what you can make!" />
+  <meta property="og:image" content="https://dumpsterdom.github.io/wdd231/cookwhat/images/hero-pasta.jpg" />
+  <meta property="og:url" content="https://dumpsterdom.github.io/wdd231/cookwhat/index.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-latin-w800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/indexmobile.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Smart Pantry Logo" width="80" height="80">
+        <span class="chamber-title">Smart Pantry</span>
+      </a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav -->
+      <nav id="mainNav" class="nav-closed">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="pantry.html" class="nav-link">My Pantry</a></li>
+          <li><a href="rec.html" class="nav-link">Recipes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home">
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/food1.jpg" alt="Delicious homemade meal" class="hero-image" fetchpriority="high">
+      <div class="hero-card-container">
+        <div class="hero-card">
+          <h1>Cook What You Have</h1>
+          <p>Stop food waste. Discover amazing recipes using ingredients already in your kitchen.</p>
+          <a href="pantry.html" class="cta-button large-cta">Check My Pantry</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipe View -->
+    <section class="carousel-section">
+      <div class="container">
+        <h2>Top Recipes This Week</h2>
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="images/garlicpasta.jpg" alt="Creamy Garlic Pasta">
+              <div class="slide-caption">
+                <h3>Creamy Garlic Parmesan Pasta</h3>
+                <p>15-minute comfort food</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="images/honeychciken.jpg" alt="Honey Garlic Chicken">
+              <div class="slide-caption">
+                <h3>One-Pan Honey Garlic Chicken</h3>
+                <p>Sweet, sticky, and easy cleanup</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="images/taicurry.jpg" alt="Thai Vegetable Curry">
+              <div class="slide-caption">
+                <h3>Thai Coconut Vegetable Curry</h3>
+                <p>Use up all your leftover veggies</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-prev" aria-label="Previous slide">⬅️</button>
+          <button class="carousel-next" aria-label="Next slide">➡️</button>
+          <div class="carousel-dots" role="tablist"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission-section">
+      <img src="images/food3.jpg" alt="Our mission" class="mission-bg-img" loading="lazy">
+      <div class="mission-overlay"></div>
+      <div class="mission-card">
+        <h2>Our Mission</h2>
+        <p>We believe no one should ever wonder “What can I cook tonight?” when their kitchen is already full of possibilities.</p>
+        <p>Smart Pantry helps you turn the ingredients you already have into delicious, waste-free meals — one pantry at a time.</p>
+        <p><strong>Less waste. More flavor. Real cooking, made simple.</strong></p>
+      </div>
+    </section>
+
+    <!-- Tips  -->
+    <section class="tips-section">
+      <div class="container">
+        <h2>Cooking Tips & Resources</h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <h3>Reduce Food Waste</h3>
+            <p>Freeze herbs in olive oil, turn leftovers into frittatas, and learn proper storage to keep produce fresh longer.</p>
+          </div>
+          <div class="tip-card">
+            <h3>Pantry Staples</h3>
+            <p>Rice, pasta, canned tomatoes, beans, spices, oil, and vinegar. These essentials unlock hundreds of meals.</p>
+          </div>
+          <div class="tip-card">
+            <h3>Quick Meal Ideas</h3>
+            <p>Fried rice, pasta aglio e olio, bean tacos, and veggie omelettes. All ready in under 20 minutes!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="contact">
+      <p><strong>Smart Pantry</strong> - Recipe Recommendations</p>
+      © <span id="year"></span> Smart Pantry
+    </div>
+    <div class="me">
+      <p>
+        <a href="ref.html" class="footer-link">References</a> | 
+        © <span id="year"></span> Smart Pantry
+      </p>
+      <p>Last modified: <span id="lastMod"></span></p>
+    </div>
+  </div>
+</footer>
+
+  <script type="module" src="scripts/index.js"></script>
+</body>
+</html>
