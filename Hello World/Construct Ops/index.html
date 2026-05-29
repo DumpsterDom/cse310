@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contractor Document Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Contractor Intake + Job Tracking</p>
+      <h1>Contractor Document Portal</h1>
+      <p class="header-text">
+        Add contractors once, then track separate jobs, counties, services, documents, and statuses under each contractor profile.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-layout">
+    <section class="card form-card">
+      <h2>Add Contractor</h2>
+      <p class="section-note">
+        Start with a quick contact profile. Email or phone is required, but both can be entered.
+      </p>
+
+      <form id="contractorForm">
+        <div class="form-grid">
+          <label>
+            Contact Name *
+            <input type="text" id="contactName" required placeholder="Example: Carlos Rivera" />
+          </label>
+
+          <label>
+            Business Name *
+            <input type="text" id="businessName" required placeholder="Example: Rivera Remodeling LLC" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" placeholder="name@email.com" />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" id="phone" placeholder="704-555-0123" />
+          </label>
+
+          <label>
+            License Number
+            <input type="text" id="licenseNumber" placeholder="Optional" />
+          </label>
+
+          <label>
+            Business Registration #
+            <input type="text" id="businessRegistrationNumber" placeholder="Optional" />
+          </label>
+
+          <label>
+            Business Type
+            <select id="businessType">
+              <option value="">Select type</option>
+              <option>General Contractor</option>
+              <option>Electrical</option>
+              <option>Plumbing</option>
+              <option>Mechanical / HVAC</option>
+              <option>Roofing</option>
+              <option>Drywall / Paint</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Mailing Address
+            <input type="text" id="mailingAddress" placeholder="Optional" />
+          </label>
+
+          <label class="full-width">
+            Contractor Notes
+            <textarea id="contractorNotes" rows="3" placeholder="Add business-specific notes, preferred contact method, missing info, etc."></textarea>
+          </label>
+        </div>
+
+        <button id="contractorSubmitButton" type="submit">Save Contractor</button>
+        <p id="appMessage" class="app-message"></p>
+      </form>
+    </section>
+
+    <section class="dashboard">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span id="contractorCount">0</span>
+          <p>Contractors</p>
+        </article>
+        <article class="stat-card">
+          <span id="jobCount">0</span>
+          <p>Total Jobs</p>
+        </article>
+        <article class="stat-card">
+          <span id="openJobCount">0</span>
+          <p>Open Jobs</p>
+        </article>
+      </div>
+
+      <section class="card">
+        <div class="dashboard-heading">
+          <div>
+            <h2>Contractors</h2>
+            <p class="section-note">Click a contractor or business name to view their profile and jobs.</p>
+          </div>
+        </div>
+
+        <div id="contractorList" class="contractor-list"></div>
+      </section>
+
+      <section class="card detail-card" id="contractorDetailCard">
+        <div class="dashboard-heading">
+          <div>
+            <h2 id="selectedContractorName">Select a contractor</h2>
+            <p id="selectedContractorMeta" class="section-note">
+              After you select a contractor, their profile and jobs will show here.
+            </p>
+          </div>
+        </div>
+
+        <div id="contractorProfile" class="profile-grid"></div>
+
+        <hr class="section-divider" />
+
+        <h3>Add Job for Selected Contractor</h3>
+        <p class="section-note">Each job stays connected to the contractor but can have its own county, service, document type, and status.</p>
+
+        <form id="jobForm">
+          <div class="form-grid">
+            <label>
+              Job Name *
+              <input type="text" id="jobName" required placeholder="Example: Gastonia Permit Package" />
+            </label>
+
+            <label>
+              Project Address *
+              <input type="text" id="projectAddress" required placeholder="123 Main St, Gastonia, NC" />
+            </label>
+
+            <label>
+              County *
+              <select id="county" required>
+                <option value="">Select county</option>
+                <option>Mecklenburg</option>
+                <option>Gaston</option>
+                <option>Catawba</option>
+                <option>Union</option>
+                <option>Cabarrus</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              Service Needed *
+              <select id="serviceNeeded" required>
+                <option value="">Select service</option>
+                <option>Permit Assistance</option>
+                <option>Document Review</option>
+                <option>Bookkeeping Setup</option>
+                <option>Business Tracker Setup</option>
+                <option>Website / Marketing Help</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              Document Type
+              <select id="documentType">
+                <option value="">Select document</option>
+                <option>Permit Application</option>
+                <option>Plans / Drawings</option>
+                <option>Estimate</option>
+                <option>Invoice</option>
+                <option>W-9</option>
+                <option>Certificate of Insurance</option>
+                <option>Business License</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              Status *
+              <select id="status" required>
+                <option>New</option>
+                <option>In Review</option>
+                <option>Waiting on Contractor</option>
+                <option>Missing Info</option>
+                <option>Submitted</option>
+                <option>Complete</option>
+              </select>
+            </label>
+
+            <label class="full-width">
+              Job Notes
+              <textarea id="jobNotes" rows="3" placeholder="Add job details, missing items, permit notes, or next steps..."></textarea>
+            </label>
+          </div>
+
+          <button id="jobSubmitButton" type="submit">Save Job</button>
+        </form>
+
+        <div class="jobs-heading">
+          <h3>Jobs for This Contractor</h3>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Job</th>
+                <th>County</th>
+                <th>Service</th>
+                <th>Document</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="jobsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

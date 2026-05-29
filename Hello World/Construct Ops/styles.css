@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #111827, #1f4e79);
+  color: white;
+  padding: 48px 8%;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  color: #bfdbfe;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+.header-text {
+  max-width: 760px;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) 1fr;
+  gap: 24px;
+  width: min(1280px, 92%);
+  margin: -32px auto 48px;
+  align-items: start;
+}
+
+.card,
+.stat-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card {
+  padding: 24px;
+}
+
+.section-note {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  background: #1f4e79;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #163a5a;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 22px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f4e79;
+}
+
+.stat-card p {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.contractor-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contractor-item {
+  width: 100%;
+  margin: 0;
+  background: #f8fafc;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.contractor-item:hover,
+.contractor-item.active {
+  background: #e0f2fe;
+  border-color: #2563eb;
+}
+
+.contractor-item small {
+  display: block;
+  color: #6b7280;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.job-count {
+  white-space: nowrap;
+  color: #1f4e79;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.detail-card {
+  scroll-margin-top: 20px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.profile-grid div {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.profile-grid strong {
+  display: block;
+  font-size: 0.78rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+}
+
+.profile-grid span {
+  color: #1f2937;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 24px 0;
+}
+
+.jobs-heading {
+  margin-top: 26px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+th {
+  color: #4b5563;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+td small {
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #e5e7eb;
+}
+
+.status-new {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-in-review {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-waiting-on-contractor,
+.status-missing-info {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-submitted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-complete {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.app-message {
+  margin: 14px 0 0;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: none;
+}
+
+.app-message.info,
+.app-message.success,
+.app-message.warning,
+.app-message.error {
+  display: block;
+}
+
+.app-message.info {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.app-message.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.app-message.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.app-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 22px 12px;
+}
+
+.disabled-form {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 36px 5%;
+  }
+
+  .page-layout {
+    width: 94%;
+  }
+
+  .form-grid,
+  .stats-grid,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contractor-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
