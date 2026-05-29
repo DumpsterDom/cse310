@@ -94,11 +94,15 @@ Example job relationship:
 5. Open `app.js`.
 6. Paste your config into the clearly marked section:
 
-```js
-// PASTE YOUR FIREBASE CONFIG BELOW
-```
+## FIREBASE CONFIG 
 
-Replace the placeholder values with your real Firebase project values.
+apiKey: "AIzaSyD9WsbLlPfGbagpHOqVl5nTFdJ_C70cNrc",
+authDomain: "construct-ops-40ded.firebaseapp.com",
+projectId: "construct-ops-40ded",
+storageBucket: "construct-ops-40ded.firebasestorage.app",
+messagingSenderId: "54922290400",
+appId: "1:54922290400:web:78e0d5e80aa2d23f07dc85",
+measurementId: "G-HXZP8GKCSN"
 
 ## Firestore Setup
 
