@@ -20,7 +20,7 @@ Some of the features included are:
 
 The purpose of creating this software was to learn more about game development and how different programming systems work together. I wanted to better understand how to create a game loop, handle player input, manage objects, create enemy AI, and build a complete interactive experience.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/o07uiPK6tSw)
 
 # Development Environment
 
